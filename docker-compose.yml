@@ -1,0 +1,19 @@
+version: "3.2"
+
+networks:
+  backend:
+
+
+services:
+  shippingendpoint:
+    image: henrygustavo/shippingendpoint
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Production
+    container_name: shippingendpoint
+    ports:
+      - "9005:80"
+    networks:
+      - backend
