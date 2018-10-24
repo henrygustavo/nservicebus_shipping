@@ -3,7 +3,8 @@ applications:
 - name: shippingendpoint
   memory: 128MB
   instances: 1
-  buildpack: dotnet_core_buildpack
+  docker:
+    image: henrygustavo/shippingendpoint
   stack: cflinuxfs2
   no-route: true    
   health-check-type: process
