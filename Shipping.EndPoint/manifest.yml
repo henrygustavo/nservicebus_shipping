@@ -3,6 +3,7 @@ applications:
 - name: shippingendpoint
   memory: 128MB
   instances: 1
+  disk_quota: 2GB
   docker:
     image: henrygustavo/shippingendpoint
   stack: cflinuxfs2
